@@ -1,8 +1,20 @@
+.header {
+    text-align: center;
+    margin: 30px;
+}
+
 .form {
-    height: 100vh;
-    div {
-        width: 40vw;
+    margin: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    .inputs_wrapper {
         margin: auto;
+        margin-bottom: 30px;
+        display: flex;
+    }
+    .inputs_section {
+        width: 30vw;
         display: flex;
         flex-direction: column;
     }
@@ -10,9 +22,6 @@
         margin: 0 0 10px 0;
         padding: 0;
     }
-    
-    margin: 0 100px;
-    display: flex;
     label {
         width: 200px;
     }
@@ -21,11 +30,12 @@
         margin: 10px 0;
     }
     button {
-        background-color: lightgray;
+        background-color: #bbb;
         border-radius: 10px;
         border: none;
         color: white;
         width: 200px;
+        margin-bottom: 10px;
         padding: 5px 10px;
         text-align: center;
         text-decoration: none;
@@ -34,6 +44,7 @@
     }
     .submit {
         margin: auto;
+        margin-top: 30px;
         background-color: gray;
         border-radius: 10px;
         border: none;
@@ -42,7 +53,6 @@
         padding: 20px 32px;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
         font-size: 16px;
     }
 }

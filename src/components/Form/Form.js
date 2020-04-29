@@ -88,36 +88,39 @@ function Form() {
 
   return (
     <div className="App">
+      <h1 className={styles.header}>Dodaj nową recenzję</h1>
       <form className={styles.form}>
-        <div>
-          <label>
-            Tytuł:
-            <input name="title" type="text" value={title} onChange={handleInputChange}/>
-          </label>
-          <label>
-            Opis:
-            <textarea name="description" value={description} type="text" onChange={handleInputChange}/>
-          </label>
-          <label>
-            Cena:
-            <input name="price" type="text" value={price} onChange={handleInputChange} />
-          </label>
-          <label>
-            Typ:
-            <input name="type" type="text" value={type} onChange={handleInputChange} />
-          </label>
-        </div>
-        <div>
-          <Linki imgUrlList={imgUrlList}/>
-          <label>
-            Link do zdjęcia:
-            <input name="imgUrl" value={imgUrl} type="text" onChange={handleInputChange} />
-          </label>
-          <button onClick={handleUrlAdd} >Dodaj url</button>
-          <label>
-            reflink:
-            <input name="link" type="text" value={link} onChange={handleInputChange} />
-          </label>
+        <div className={styles.inputs_wrapper}>
+          <div className={styles.inputs_section}>
+            <label>
+              Tytuł:
+              <input name="title" type="text" value={title} onChange={handleInputChange}/>
+            </label>
+            <label>
+              Opis:
+              <textarea name="description" value={description} type="text" onChange={handleInputChange}/>
+            </label>
+            <label>
+              Cena:
+              <input name="price" type="text" value={price} onChange={handleInputChange} />
+            </label>
+            <label>
+              Typ:
+              <input name="type" type="text" value={type} onChange={handleInputChange} />
+            </label>
+          </div>
+          <div className={styles.inputs_section}>
+            <Linki imgUrlList={imgUrlList}/>
+            <label>
+              Link do zdjęcia:
+              <input name="imgUrl" value={imgUrl} type="text" onChange={handleInputChange} />
+            </label>
+            <button onClick={handleUrlAdd} >Dodaj url</button>
+            <label>
+              reflink:
+              <input name="link" type="text" value={link} onChange={handleInputChange} />
+            </label>
+          </div>
         </div>
         <input className={styles.submit} type="submit" onClick={handleSubmit} />
       </form>
