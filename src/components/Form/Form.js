@@ -50,6 +50,8 @@ function Form() {
     .catch(error => {
         console.log(error);
     })
+    .then(alert("Przesłano"))
+    .then(window.location.reload())
 
   }
   
@@ -105,8 +107,27 @@ function Form() {
               <input name="price" type="text" value={price} onChange={handleInputChange} />
             </label>
             <label>
-              Typ:
-              <input name="type" type="text" value={type} onChange={handleInputChange} />
+              Typ: 
+              <select name="type" onChange={handleInputChange}>
+                <option value="dress">Sukienka</option>
+                <option value="schoes">Buty</option>
+                <option value="coat">Płaszcz</option>
+                <option value="others">Inne</option>
+                <option value="scarf">Szale</option>
+                <option value="fitness">Fitness</option>
+                <option value="jewelery">Biżuteria</option>
+                <option value="makeup">MakeUp</option>
+                <option value="vest">Kamizelki</option>
+                <option value="jacket">Kurtki</option>
+                <option value="sweater">Swetry</option>
+                <option value="blazer">Marynarki</option>
+                <option value="skirt">Spódniczki</option>
+                <option value="swimsuit">Stroje kąpielowe</option>
+                <option value="jacket">Kurtki</option>
+                <option value="bags">Torebki</option>
+                <option value="pyjama">Piżamy</option>
+                <option value="romper">Kombinezon</option>
+              </select>
             </label>
           </div>
           <div className={styles.inputs_section}>
